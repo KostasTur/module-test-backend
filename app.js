@@ -34,11 +34,17 @@ app.get('/api/jokes/:amount', async (req, res) => {
   try {
     let jokes = [];
     let n = req.params.amount;
-    for (let i = 0; i < n; i++) {
-      const response = await axios('https://api.chucknorris.io/jokes/random');
-      jokes.push(response.data.value);
+    if (!isNaN(+n)) {
+      for (let i = 0; i < n; i++) {
+        const response = await axios('https://api.chucknorris.io/jokes/random');
+        jokes.push(response.data.value);
+      }
+      res.send(jokes);
+    } else {
+      res.status(401).json({
+        message: `wrong input please use a number. Like this: /api/jokes/10`,
+      });
     }
-    res.send(jokes);
   } catch (err) {
     console.log(err);
   }
