@@ -1,0 +1,11 @@
+Programavimo aplinkos ir kūrimo proceso valdymas
+------------------------------------------------
+Sukurkite REST API, kuris grąžins faktus/juokelius apie Chuck Norris
+/api/jokes/                                     <- grąžins 10 juokelių apie Chuck Norris (duomenys turi būti pateikiami masyve, kaip tekstas t.y. ["","",""...])
+/api/jokes/:amount                      <- grąžins "amount" parametre nurodytą kiekį juokelių apie Chuck Norris (duomenys turi būti pateikiami masyve, kaip tekstas t.y. ["","",""...])
+/api/jokes/:category                    <- grąžins 10 juokelių apie Chuck Norris iš nurodytos "category" (duomenys turi būti pateikiami masyve, kaip tekstas t.y. ["","",""...])
+/api/jokes/:category/:amount    <- grąžins "amount" parametre nurodytą kiekį juokelių apie Chuck Norris iš nurodytos "category" (duomenys turi būti pateikiami masyve, kaip tekstas t.y. ["","",""...])
+Svarbu:
+Duomenis imti iš čia: https://api.chucknorris.io/
+Talpinimas: REST API turi būti patalpintas Heroku arba analogiškame servise
+Talpinimas: Turi būti sukurtas vieno puslapio svetainė, kurioje bus galima rasti visus jūsų REST API routes ir paaikškinus apie juos, panašiai kaip čia: https://api.chucknorris.io/
